@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <title>Astral Love Center - Spiritual Guide & Effective Love Spells</title>
+    <meta name="description" content="Find light and harmony with Astral Love Center. We offer effective love spells, online tarot readings, zodiac compatibility, and personalized rituals. Guaranteed confidentiality.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS GENERALES Y RESETS --- */
+        :root {
+            --color-fondo-oscuro: #0a0e17;
+            --color-secundario-purple: #1F0C29;
+            --color-texto: #F8F8FF;
+            --color-acento: #D4AF37;
+            --color-wpp: #25D366;
+            --fuente-titulos: 'Playfair Display', serif;
+            --fuente-cuerpo: 'Montserrat', sans-serif;
+            --sombra: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            scroll-behavior: smooth;
+            width: 100%;
+            overflow-x: hidden; /* SOLUCIÓN: Evita el desajuste/espacio blanco a la derecha */
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--color-texto);
+            line-height: 1.6;
+            background-color: var(--color-fondo-oscuro);
+            background-image: linear-gradient(rgba(10, 14, 23, 0.93), rgba(10, 14, 23, 0.93)), url('F1.PNG'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--fuente-titulos);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-acento);
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        /* --- BOTONES (CTA) --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-dorado {
+            background-color: var(--color-acento);
+            color: #000;
+        }
+
+        .btn-dorado:hover {
+            background-color: #f7d774;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-wpp {
+            background-color: var(--color-wpp);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-wpp:hover {
+            background-color: #20b358;
+            transform: scale(1.05);
+        }
+
+        .wpp-icon {
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
+
+        /* --- ENCABEZADO --- */
+        header {
+            background-color: rgba(10, 14, 23, 0.96);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--fuente-titulos);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-acento);
+            line-height: 1.1;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a:hover {
+            color: var(--color-acento);
+        }
+
+        /* --- INICIO --- */
+        #inicio {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .hero-info {
+            max-width: 850px;
+        }
+
+        #inicio h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        #inicio h1 span {
+            color: var(--color-acento);
+        }
+
+        #inicio p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        /* --- SERVICIOS --- */
+        #servicios {
+            background-color: var(--color-secundario-purple);
+            box-shadow: inset 0 10px 15px -10px rgba(0,0,0,0.5), inset 0 -10px 15px -10px rgba(0,0,0,0.5);
+        }
+
+        .servicios-grid {
+            display: grid;
+            /* SOLUCIÓN: Se usa min(100%, 280px) para que en celulares chicos la tarjeta se encoja y no empuje la pantalla */
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .servicio-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.05);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: var(--sombra);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .servicio-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .servicio-img-container {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .servicio-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+
+        .servicio-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .servicio-contenido {
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .servicio-card h3 {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .servicio-card p {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: rgba(248, 248, 255, 0.9);
+        }
+
+        /* --- SOBRE MÍ --- */
+        .sobre-mi-wrap {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .sobre-mi-img {
+            flex: 1;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: var(--sombra);
+            border: 2px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .sobre-mi-info {
+            flex: 1;
+        }
+
+        .sobre-mi-info h2 {
+            text-align: left;
+        }
+
+        .sobre-mi-info p {
+            margin-bottom: 25px;
+            font-weight: 300;
+            font-size: 1.05rem;
+        }
+
+        /* --- TESTIMONIOS --- */
+        #testimonios {
+            background-color: var(--color-secundario-purple);
+            position: relative;
+        }
+        
+        #testimonios::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(31, 12, 41, 0.8), rgba(31, 12, 41, 0.8)), url('testimonios.png'); 
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15; 
+            z-index: 1;
+        }
+
+        .contenedor-testimonios {
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .testimonio-card {
+            background-color: #FFF;
+            color: #1a1a1a;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: left;
+            position: relative;
+            box-shadow: var(--sombra);
+        }
+
+        .testimonio-card::before {
+            content: '“';
+            font-family: var(--fuente-titulos);
+            font-size: 6rem;
+            color: rgba(212, 175, 55, 0.2);
+            position: absolute;
+            top: -15px;
+            left: 15px;
+        }
+
+        .testimonio-card p {
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            position: relative;
+            z-index: 3;
+            line-height: 1.7;
+        }
+
+        .testimonio-card h4 {
+            font-family: var(--fuente-cuerpo);
+            color: #8c722a; 
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* --- FAQ --- */
+        #faq h2 {
+            margin-bottom: 50px;
+        }
+
+        .faq-item {
+            background-color: rgba(255, 255, 255, 0.04);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .faq-pregunta {
+            padding: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-pregunta:hover {
+            background-color: rgba(255, 255, 255, 0.07);
+        }
+
+        .faq-respuesta {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            font-weight: 300;
+            font-size: 1rem;
+            color: rgba(248, 248, 255, 0.85);
+        }
+
+        /* --- CONTACTO --- */
+        #contacto {
+            text-align: center;
+            background-color: var(--color-secundario-purple);
+            box-shadow: inset 0 10px 15px -10px rgba(0,0,0,0.5);
+        }
+
+        #contacto h2 {
+            margin-bottom: 15px;
+        }
+
+        #contacto p {
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .contacto-cta {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contacto-info {
+            margin-top: 60px;
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: rgba(248, 248, 255, 0.7);
+        }
+
+        .contacto-info p {
+            margin-bottom: 5px;
+        }
+
+        /* --- PIE DE PÁGINA (FOOTER) --- */
+        footer {
+            background-color: #050608;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            font-weight: 300;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer strong {
+            color: var(--color-acento);
+        }
+
+        /* Enlace de políticas en el footer */
+        .enlace-legal {
+            color: var(--color-acento);
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 15px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        
+        .enlace-legal:hover {
+            color: #fff;
+        }
+
+        /* --- MODAL DE POLÍTICAS --- */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.85); 
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: var(--color-secundario-purple);
+            margin: 5% auto; 
+            padding: 40px;
+            border: 1px solid var(--color-acento);
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            color: var(--color-texto);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .close-btn {
+            color: var(--color-acento);
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .modal-content h2 {
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 10px;
+            margin-top: 30px;
+            font-size: 1.5rem;
+        }
+
+        .modal-content h2:first-of-type {
+            margin-top: 0;
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        .modal-content p, .modal-content li {
+            font-size: 0.95rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .modal-content ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            margin-bottom: 20px;
+        }
+
+        /* --- RESPONSIVE DESIGN (SOLUCIONES MÓVILES APLICADAS AQUÍ) --- */
+        @media (max-width: 992px) {
+            #inicio h1 { font-size: 2.5rem; }
+            .sobre-mi-wrap { flex-direction: column; text-align: center; gap: 40px; }
+            .sobre-mi-info h2 { text-align: center; }
+            .hero-info p { font-size: 1.1rem; }
+        }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; } 
+            
+            /* Ajuste del Header para que no rompa la pantalla en celulares */
+            .header-wrap {
+                padding: 0 10px;
+            }
+            .logo { 
+                font-size: 1.35rem; /* Logo un poco más pequeño */
+                max-width: 50%;
+            }
+            .btn-wpp {
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+            
+            #inicio h1 { font-size: 2.1rem; }
+            .contenedor { padding: 50px 0; }
+            
+            /* Fuerza a la cuadrícula a ser de 1 columna limpia */
+            .servicios-grid, .testimonios-grid { 
+                grid-template-columns: 1fr; 
+            }
+            
+            .modal-content { width: 95%; padding: 25px; margin: 10% auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="contenedor header-wrap" style="padding: 0;">
+            <a href="#" class="logo">Astral Love Center</a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Home</a></li>
+                    <li><a href="#servicios">Services</a></li>
+                    <li><a href="#sobre-mi">About Me</a></li>
+                    <li><a href="#testimonios">Testimonials</a></li>
+                    <li><a href="#contacto">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/573215387656" class="btn btn-wpp" target="_blank">
+                <span class="wpp-icon">&#128172;</span> WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <section id="inicio">
+        <div class="contenedor hero-info">
+            <h1>Find <span>Light</span> and Harmony in Your Life with <span>Astral Love Center</span></h1>
+            <p>Honest, compassionate, and confidential spiritual guidance. Personalized rituals and online tarot readings to restore your peace.</p>
+            <a href="https://wa.me/573215387656" class="btn btn-dorado" target="_blank">
+                Book Your Confidential Consultation Today
+            </a>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="contenedor">
+            <h2>Our Esoteric Services</h2>
+            <div class="servicios-grid">
+                
+                <div class="servicio-card">
+                    <div class="servicio-img-container">
+                        <img src="Amarres.png" alt="Love Spell">
+                    </div>
+                    <div class="servicio-contenido">
+                        <h3>Effective and Ethical Love Spells</h3>
+                        <p>We use white magic and personalized rituals to harmonize energies, heal bonds, and attract that special someone while respecting free will.</p>
+                    </div>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-img-container">
+                        <img src="tarot.png" alt="Tarot Card Reading">
+                    </div>
+                    <div class="servicio-contenido">
+                        <h3>Online Tarot Reading</h3>
+                        <p>Gain absolute clarity about love, career, and finances with a deep and accurate card reading. Messages from the universe just for you.</p>
+                    </div>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-img-container">
+                        <img src="Zodiaco.png" alt="Birth Chart and Astrology">
+                    </div>
+                    <div class="servicio-contenido">
+                        <h3>Birth Chart and Compatibility</h3>
+                        <p>Discover your life purpose and analyze zodiac compatibility with your partner to understand the challenges and strengths of your union.</p>
+                    </div>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-img-container">
+                        <img src="Endulsa.png" alt="Sweetening Ritual">
+                    </div>
+                    <div class="servicio-contenido">
+                        <h3>Love Sweetening Rituals</h3>
+                        <p>Soften your loved one's character, eliminate harshness and constant arguments to renew pure sweetness and affection in your relationship.</p>
+                    </div>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-img-container">
+                        <img src="limpieza.png" alt="Spiritual Cleansing">
+                    </div>
+                    <div class="servicio-contenido">
+                        <h3>Spiritual and Auric Cleansing</h3>
+                        <p>Free yourself from blockages, stagnant energies, and envy. We purify your aura and open your paths to success, love, and inner peace.</p>
+                    </div>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-img-container">
+                        <img src="proteccion.png" alt="Energetic Protection">
+                    </div>
+                    <div class="servicio-contenido">
+                        <h3>Energetic Protection</h3>
+                        <p>Creation of unbreakable spiritual shields. Protect your energy, your home, and your loved ones from psychic attacks and bad vibes.</p>
+                    </div>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-img-container">
+                        <img src="recuperacion.png" alt="Get Your Ex Back">
+                    </div>
+                    <div class="servicio-contenido">
+                        <h3>Reunite Lovers (Ex Recovery)</h3>
+                        <p>If distance and pain have separated your paths, we work spiritually to heal the wounds and create the perfect atmosphere for reunion.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="contenedor sobre-mi-wrap">
+        <img src="sobre-mi.png" alt="Your Trusted Spiritual Guide" class="sobre-mi-img">
+        <div class="sobre-mi-info">
+            <h2>Your Trusted Spiritual Guide</h2>
+            <p>At Astral Love Center, I understand that taking the first step requires courage. With years of experience in the esoteric arts, my purpose is to illuminate your path.</p>
+            <p>Here you will find a safe space, free of judgment, and with **absolute confidentiality**. I do not offer false promises; I offer my gift and dedication to help you find harmony.</p>
+            <a href="#contacto" class="btn btn-dorado">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="testimonios">
+        <div class="contenedor contenedor-testimonios">
+            <h2>Our Testimonials</h2>
+            <div class="testimonios-grid">
+                
+                <div class="testimonio-card">
+                    <p>"I was going through the darkest time. Thanks to her guidance and the effective love spells, today my partner and I are closer than ever."</p>
+                    <h4>- Laura M.</h4>
+                </div>
+
+                <div class="testimonio-card">
+                    <p>"The online tarot reading was incredibly accurate. It gave me the peace of mind I needed to make an important career decision."</p>
+                    <h4>- Carlos R.</h4>
+                </div>
+
+                <div class="testimonio-card">
+                    <p>"Excellent service and professionalism. I felt heard and supported at all times. 100% recommended!"</p>
+                    <h4>- Ana G.</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="contenedor">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-pregunta">Do the rituals really work? <span>+</span></div>
+            <div class="faq-respuesta">Yes. Rituals channel and direct energy towards a goal. They require your faith, willingness, and a positive attitude to allow the universe to act.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pregunta">Is my consultation confidential? <span>+</span></div>
+            <div class="faq-respuesta">Absolutely. Professional secrecy is the foundation of Astral Love Center. Your story, details, and intentions are 100% protected.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pregunta">How long does it take to see results? <span>+</span></div>
+            <div class="faq-respuesta">Every process is unique. Some people feel changes in days, while others need weeks for the energy to settle. I will accompany you throughout the entire process.</div>
+        </div>
+
+    </section>
+
+    <section id="contacto">
+        <div class="contenedor">
+            <h2>Don't leave your happiness to chance</h2>
+            <p>The universe is ready to listen. I am waiting for you to start your transformation today.</p>
+            
+            <div class="contacto-cta">
+                <a href="https://wa.me/573215387656" class="btn btn-wpp" target="_blank">
+                    <span class="wpp-icon">&#128172;</span> Direct WhatsApp Chat
+                </a>
+            </div>
+
+            <div class="contacto-info">
+                <p>🌐 <a href="https://astrallovecenter.com">astrallovecenter.com</a></p>
+                <p>✉️ <a href="mailto:contact@astrallovecenter.com">contact@astrallovecenter.com</a></p>
+                <p>📲 Online Consultations: +57 321 5387656</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2023 **Astral Love Center**. All rights reserved.</p>
+            <p>Legal Disclaimer: Esoteric services are for personal guidance and entertainment purposes only. You must be 18 years or older.</p>
+            
+            <a class="enlace-legal" id="btn-abrir-modal">Terms of Use and Legal Policies</a>
+        </div>
+    </footer>
+
+    <div id="modal-politicas" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Terms of Use and Legal Policies</h2>
+            
+            <h2>1. Disclaimer</h2>
+            <p>The services offered at Astral Love Center (tarot readings, astrology, rituals, and love spells) are exclusively for spiritual, entertainment, and personal growth purposes. <strong>We do not guarantee 100% specific results</strong>, as the effectiveness of energy and magic depends on multiple factors, including the free will of the people involved and the disposition of the universe.</p>
+            <p>Our services <strong>DO NOT replace</strong> the advice of a medical, psychological, psychiatric, financial, or legal professional. If you are facing physical or mental health issues, we urge you to seek certified medical help.</p>
+
+            <h2>2. Terms and Conditions of Use</h2>
+            <ul>
+                <li>By accessing this site and using our services, you confirm that you are <strong>18 years of age or older</strong>.</li>
+                <li>You agree to maintain respectful communication. We reserve the right of admission and to refuse or cancel services if hostility, disrespect, or harmful intentions are perceived.</li>
+                <li>All information provided during consultations will be treated under the strictest professional secrecy.</li>
+            </ul>
+
+            <h2>3. Privacy Policy</h2>
+            <p>At Astral Love Center, we respect your privacy. The requested data (such as your name, date of birth, WhatsApp number, or photographs) is used exclusively to perform the requested reading or ritual. <strong>We will never share, sell, or expose</strong> your personal information or your story to third parties. Your consultations are 100% confidential.</p>
+
+            <h2>4. Refund and Cancellation Policy</h2>
+            <ul>
+                <li><strong>Cancellations:</strong> If you need to cancel or reschedule a live consultation (tarot/astrology), you must do so at least 24 hours in advance.</li>
+                <li><strong>Refunds:</strong> Due to the nature of spiritual and digital services, which require our time, energy, and, in the case of rituals, physical materials that are consumed on the spot, <strong>we do not offer refunds</strong> once the service, reading, or ritual has begun or has been delivered.</li>
+            </ul>
+
+            <h2>5. Cookies Policy</h2>
+            <p>We use cookies and similar tracking technologies (such as Google Analytics or social media pixels) to analyze our site traffic, understand where our visitors come from, and improve your browsing experience, as well as to offer you relevant advertising. By continuing to browse this site, you accept the use of these cookies.</p>
+        </div>
+    </div>
+
+    <script>
+        // 1. Script para el Acordeón del FAQ
+        document.querySelectorAll('.faq-pregunta').forEach(item => {
+            item.addEventListener('click', () => {
+                const respuesta = item.nextElementSibling;
+                if (respuesta.style.maxHeight) {
+                    respuesta.style.maxHeight = null;
+                    respuesta.style.padding = "0 25px";
+                    item.querySelector('span').innerText = "+";
+                } else {
+                    respuesta.style.maxHeight = respuesta.scrollHeight + "px";
+                    respuesta.style.padding = "25px";
+                    item.querySelector('span').innerText = "-";
+                }
+            });
+        });
+
+        // 2. Script para manejar el Modal de Políticas
+        var modal = document.getElementById("modal-politicas");
+        var btn = document.getElementById("btn-abrir-modal");
+        var span = document.getElementsByClassName("close-btn")[0];
+
+        // Abrir el modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Cerrar el modal (con la X)
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Cerrar el modal haciendo clic fuera de la caja
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
