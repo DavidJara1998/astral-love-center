@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astral Love Center – Maestra Victoria | Vidente & Espiritista</title>
+    <meta name="description" content="Maestra Victoria, Vidente con más de 40 años de experiencia. Amarres de amor garantizados, lecturas de tarot precisas, rituales de regreso de pareja y limpiezas espirituales. Consulta desde $50 USD. 100% confidencial.">
+    <meta name="keywords" content="vidente, amarres de amor, tarot en línea, espiritista, regreso de pareja, Maestra Victoria, Astral Love Center, limpieza espiritual">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://astrallovecenter.com/">
+    <meta property="og:title" content="Astral Love Center – Maestra Victoria">
+    <meta property="og:description" content="Más de 40 años de experiencia espiritual. Amarres efectivos, lecturas de tarot y rituales personalizados. Agenda tu consulta confidencial hoy.">
+    <meta property="og:image" content="https://astrallovecenter.com/sobre-mi.png">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── VARIABLES ─────────────────────────────────────── */
+        :root {
+            --bg:          #07090f;
+            --bg2:         #0f0520;
+            --bg3:         #12061e;
+            --gold:        #C9A84C;
+            --gold-light:  #f0d080;
+            --gold-dim:    rgba(201,168,76,.15);
+            --text:        #e8e4f0;
+            --text-muted:  rgba(232,228,240,.6);
+            --wpp:         #25D366;
+            --radius:      14px;
+            --shadow:      0 8px 32px rgba(0,0,0,.6);
+            --transition:  .35s cubic-bezier(.4,0,.2,1);
+            --font-title:  'Cinzel', serif;
+            --font-body:   'Cormorant Garamond', serif;
+            --font-ui:     'Montserrat', sans-serif;
+        }
+
+        /* ── RESET ─────────────────────────────────────────── */
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            color: var(--text);
+            background-color: var(--bg);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+        img { max-width:100%; height:auto; display:block; }
+        a { text-decoration:none; color:inherit; transition: var(--transition); }
+        ul { list-style:none; }
+        h1,h2,h3,h4 { font-family: var(--font-title); color: var(--gold); line-height:1.2; }
+
+        /* ── FONDO ─────────────────────────────────────────── */
+        body::before {
+            content:'';
+            position:fixed; inset:0; z-index:-1;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 0%, rgba(60,10,100,.45) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 100%, rgba(30,5,60,.3) 0%, transparent 60%),
+                url('F1.PNG') center/cover no-repeat,
+                var(--bg);
+            background-attachment: fixed;
+        }
+
+        /* ── CONTENEDOR ────────────────────────────────────── */
+        .container { width: min(92%, 1200px); margin-inline: auto; }
+        section { padding-block: 100px; }
+
+        /* ── REVEAL ────────────────────────────────────────── */
+        .reveal {
+            opacity:0;
+            transform: translateY(40px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+
+        /* ── DECORATIVOS ───────────────────────────────────── */
+        .gold-line {
+            display:block; width:60px; height:2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 16px auto 0;
+        }
+        .section-label {
+            font-family: var(--font-ui);
+            font-size:.7rem; letter-spacing:.25em; text-transform:uppercase;
+            color: var(--gold); text-align:center; margin-bottom:12px;
+        }
+        .section-title {
+            font-size: clamp(1.8rem,4vw,2.8rem);
+            text-align:center; margin-bottom:8px;
+        }
+
+        /* ── BOTONES ───────────────────────────────────────── */
+        .btn {
+            display: inline-flex; align-items:center; justify-content:center; gap:8px;
+            padding: 14px 36px; border-radius: 4px;
+            font-family: var(--font-ui); font-size:.82rem; font-weight:600;
+            letter-spacing:.1em; text-transform:uppercase;
+            cursor:pointer; border:none; transition: var(--transition);
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #b8952e, var(--gold-light), #b8952e);
+            background-size:200% 100%; background-position:100%; color:#0a0500;
+        }
+        .btn-gold:hover { background-position:0%; transform:translateY(-3px); box-shadow:0 8px 24px rgba(201,168,76,.35); }
+        .btn-outline { background:transparent; border:1px solid var(--gold); color:var(--gold); }
+        .btn-outline:hover { background: var(--gold-dim); transform:translateY(-2px); }
+        .btn-wpp {
+            background: linear-gradient(135deg,#1db954,var(--wpp));
+            color:#fff; box-shadow:0 4px 16px rgba(37,211,102,.25);
+        }
+        .btn-wpp:hover { filter:brightness(1.12); transform:translateY(-3px); box-shadow:0 8px 24px rgba(37,211,102,.35); }
+        .btn-wpp svg { width:20px; height:20px; fill:#fff; flex-shrink:0; }
+
+        /* ══════════════════════════════════════════════════════
+           HEADER
+        ══════════════════════════════════════════════════════ */
+        header {
+            position:fixed; top:0; left:0; right:0; z-index:900;
+            background:rgba(7,9,15,.88); backdrop-filter:blur(14px);
+            border-bottom:1px solid rgba(201,168,76,.12);
+            transition: var(--transition);
+        }
+        header.scrolled { background:rgba(7,9,15,.97); box-shadow:0 4px 20px rgba(0,0,0,.5); }
+        .header-inner {
+            display:flex; align-items:center; justify-content:space-between; height:70px;
+        }
+        .logo { font-family: var(--font-title); font-size:1.25rem; color: var(--gold); letter-spacing:.05em; line-height:1.1; }
+        .logo span { display:block; font-size:.65rem; letter-spacing:.2em; color: var(--text-muted); text-transform:uppercase; }
+
+        nav { display:flex; align-items:center; gap:32px; }
+        nav a {
+            font-family: var(--font-ui); font-size:.75rem; letter-spacing:.12em;
+            text-transform:uppercase; color: var(--text-muted); position:relative;
+        }
+        nav a::after {
+            content:''; position:absolute; bottom:-4px; left:0; right:0; height:1px;
+            background: var(--gold); transform:scaleX(0); transition: var(--transition);
+        }
+        nav a:hover, nav a.active { color:var(--gold); }
+        nav a:hover::after, nav a.active::after { transform:scaleX(1); }
+
+        .header-cta { display:flex; align-items:center; gap:16px; }
+
+        /* Hamburguesa */
+        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; }
+        .hamburger span { display:block; width:24px; height:2px; background: var(--gold); border-radius:2px; transition: var(--transition); }
+        .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity:0; }
+        .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+        /* Nav móvil */
+        .mobile-nav {
+            display:none; position:fixed; top:70px; left:0; right:0;
+            background:rgba(7,9,15,.97); backdrop-filter:blur(14px);
+            border-bottom:1px solid rgba(201,168,76,.12);
+            padding:24px; z-index:899; flex-direction:column; gap:8px;
+        }
+        .mobile-nav.open { display:flex; }
+        .mobile-nav a {
+            font-family: var(--font-ui); font-size:.85rem; letter-spacing:.1em;
+            text-transform:uppercase; color: var(--text-muted);
+            padding:12px 0; border-bottom:1px solid rgba(255,255,255,.05);
+        }
+        .mobile-nav a:hover { color: var(--gold); }
+
+        /* ══════════════════════════════════════════════════════
+           HERO
+        ══════════════════════════════════════════════════════ */
+        #inicio {
+            min-height:100vh; display:flex; align-items:center; justify-content:center;
+            text-align:center; padding-top:70px; position:relative; overflow:hidden;
+            width:100%;
+        }
+        #inicio .container { width:100%; display:flex; justify-content:center; align-items:center; }
+        #inicio::after {
+            content:''; position:absolute; inset:0; z-index:0;
+            background-image:
+                radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.5) 0%, transparent 100%),
+                radial-gradient(1px 1px at 60% 70%, rgba(255,255,255,.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 80% 20%, rgba(255,255,255,.3) 0%, transparent 100%),
+                radial-gradient(2px 2px at 40% 60%, rgba(201,168,76,.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,.3) 0%, transparent 100%),
+                radial-gradient(1px 1px at 90% 50%, rgba(255,255,255,.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 50% 10%, rgba(201,168,76,.5) 0%, transparent 100%);
+            animation: titilar 6s ease-in-out infinite alternate;
+        }
+        @keyframes titilar { 0% { opacity:.6; } 100% { opacity:1; } }
+
+        .hero-content { position:relative; z-index:1; max-width:820px; padding:40px 20px; margin-inline:auto; text-align:center; width:100%; }
+        .hero-badge {
+            display:inline-flex; align-items:center; gap:8px;
+            border:1px solid rgba(201,168,76,.3); border-radius:50px;
+            padding:7px 18px; font-family: var(--font-ui); font-size:.7rem;
+            letter-spacing:.18em; text-transform:uppercase; color: var(--gold);
+            background: rgba(201,168,76,.06); margin-bottom:32px;
+        }
+        .hero-badge::before { content:'✦'; font-size:.8rem; }
+        #inicio h1 {
+            font-size: clamp(2.2rem,5.5vw,4rem); color:#fff; margin-bottom:24px; font-weight:700;
+        }
+        #inicio h1 em {
+            font-style:normal;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .hero-sub {
+            font-size: clamp(1.1rem,2.5vw,1.4rem); color: var(--text-muted);
+            margin-bottom:48px; max-width:600px; margin-inline:auto; font-weight:300;
+        }
+        .hero-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+        /* Indicadores de confianza */
+        .trust-row {
+            display:flex; justify-content:center; gap:32px; flex-wrap:wrap;
+            margin-top:64px; padding-top:48px; border-top:1px solid rgba(201,168,76,.1);
+        }
+        .trust-item { display:flex; flex-direction:column; align-items:center; gap:4px; }
+        .trust-item strong { font-family: var(--font-title); font-size:1.8rem; color: var(--gold); }
+        .trust-item span { font-family: var(--font-ui); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color: var(--text-muted); }
+
+        /* ══════════════════════════════════════════════════════
+           SERVICIOS
+        ══════════════════════════════════════════════════════ */
+        #servicios {
+            background: linear-gradient(180deg, transparent 0%, rgba(15,5,32,.9) 10%, rgba(15,5,32,.9) 90%, transparent 100%);
+        }
+        .services-grid {
+            display:grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr));
+            gap:28px; margin-top:64px;
+        }
+        .service-card {
+            background: rgba(255,255,255,.03); border:1px solid rgba(201,168,76,.08);
+            border-radius: var(--radius); overflow:hidden; display:flex; flex-direction:column;
+            transition: var(--transition); box-shadow: var(--shadow);
+        }
+        .service-card:hover {
+            border-color: rgba(201,168,76,.3); transform: translateY(-8px);
+            box-shadow:0 16px 48px rgba(0,0,0,.6), 0 0 0 1px rgba(201,168,76,.15);
+        }
+        .service-img { height:210px; overflow:hidden; position:relative; }
+        .service-img::after {
+            content:''; position:absolute; inset:0;
+            background:linear-gradient(to bottom, transparent 50%, rgba(7,9,15,.85) 100%);
+        }
+        .service-img img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+        .service-card:hover .service-img img { transform:scale(1.07); }
+        .service-body { padding:28px; display:flex; flex-direction:column; flex-grow:1; gap:12px; }
+        .service-body h3 { font-size:1.15rem; color:#fff; }
+        .service-body p { font-size:1rem; color: var(--text-muted); font-weight:300; flex-grow:1; }
+        .service-link {
+            font-family: var(--font-ui); font-size:.72rem; letter-spacing:.12em;
+            text-transform:uppercase; color: var(--gold);
+            display:inline-flex; align-items:center; gap:6px; margin-top:8px;
+        }
+        .service-link::after { content:'→'; transition: var(--transition); }
+        .service-card:hover .service-link::after { transform:translateX(4px); }
+
+        /* ══════════════════════════════════════════════════════
+           SOBRE MÍ
+        ══════════════════════════════════════════════════════ */
+        #sobre-mi .about-wrap {
+            display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+        }
+        .about-img-wrap { position:relative; }
+        .about-img-wrap::before {
+            content:''; position:absolute; inset:-12px; border-radius:16px;
+            border:1px solid rgba(201,168,76,.2); pointer-events:none;
+        }
+        .about-img-wrap::after {
+            content:''; position:absolute; bottom:-20px; right:-20px;
+            width:60%; height:60%; border-radius:12px;
+            background:linear-gradient(135deg, rgba(201,168,76,.12), transparent); z-index:-1;
+        }
+        .about-img { width:100%; border-radius:12px; box-shadow:0 24px 64px rgba(0,0,0,.7); border:1px solid rgba(201,168,76,.1); }
+        .about-text h2 { text-align:left; font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:6px; }
+        .about-text .gold-line { margin:0 0 24px; }
+        .about-text p { color: var(--text-muted); margin-bottom:20px; font-size:1.1rem; font-weight:300; }
+        .credential-list { margin:28px 0; display:flex; flex-direction:column; gap:12px; }
+        .credential { display:flex; align-items:flex-start; gap:12px; }
+        .credential-icon {
+            width:32px; height:32px; border-radius:50%;
+            background: var(--gold-dim); border:1px solid rgba(201,168,76,.25);
+            display:flex; align-items:center; justify-content:center;
+            flex-shrink:0; font-size:.9rem;
+        }
+        .credential p { margin:0; font-size:1rem; }
+
+        /* ══════════════════════════════════════════════════════
+           TESTIMONIOS
+        ══════════════════════════════════════════════════════ */
+        #testimonios {
+            background: linear-gradient(180deg, transparent 0%, rgba(18,6,30,.95) 8%, rgba(18,6,30,.95) 92%, transparent 100%);
+        }
+        .testimonials-grid {
+            display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));
+            gap:28px; margin-top:64px;
+        }
+        .testimonial-card {
+            background:#fff; color:#1a1a1a; padding:36px; border-radius:var(--radius);
+            position:relative; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:16px;
+        }
+        .stars { display:flex; gap:3px; }
+        .stars span { color:#f4a800; font-size:1rem; }
+        .testimonial-card blockquote {
+            font-family: var(--font-body); font-style:italic; font-size:1.05rem;
+            line-height:1.8; color:#2a2a2a; position:relative; flex-grow:1;
+        }
+        .testimonial-card blockquote::before {
+            content:'\201C'; font-family: var(--font-title); font-size:4rem;
+            color:rgba(201,168,76,.2); position:absolute; top:-20px; left:-10px; line-height:1;
+        }
+        .testimonial-author { display:flex; align-items:center; gap:12px; }
+        .avatar {
+            width:42px; height:42px; border-radius:50%;
+            background:linear-gradient(135deg,#b8952e,#f0d080);
+            display:flex; align-items:center; justify-content:center;
+            font-family: var(--font-title); font-size:.9rem; font-weight:700;
+            color:#0a0500; flex-shrink:0;
+        }
+        .testimonial-author .name { font-family: var(--font-ui); font-weight:600; font-size:.9rem; color:#7a5e1a; }
+        .testimonial-author .location { font-family: var(--font-ui); font-size:.75rem; color:#888; }
+
+        /* ══════════════════════════════════════════════════════
+           FAQ
+        ══════════════════════════════════════════════════════ */
+        .faq-list { max-width:760px; margin:56px auto 0; display:flex; flex-direction:column; gap:12px; }
+        .faq-item {
+            background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06);
+            border-radius:10px; overflow:hidden; transition: var(--transition);
+        }
+        .faq-item.open { border-color:rgba(201,168,76,.25); background:rgba(201,168,76,.04); }
+        .faq-q {
+            padding:22px 24px; font-family: var(--font-ui); font-size:.9rem; font-weight:600;
+            cursor:pointer; display:flex; justify-content:space-between; align-items:center;
+            gap:16px; letter-spacing:.02em; user-select:none;
+        }
+        .faq-q:hover { color: var(--gold); }
+        .faq-icon {
+            width:24px; height:24px; border-radius:50%; border:1px solid rgba(201,168,76,.3);
+            display:flex; align-items:center; justify-content:center;
+            font-size:1rem; color: var(--gold); flex-shrink:0; transition:transform .3s ease;
+        }
+        .faq-item.open .faq-icon { transform:rotate(45deg); }
+        .faq-a { max-height:0; overflow:hidden; transition:max-height .4s ease, padding .4s ease; font-size:1rem; color: var(--text-muted); font-weight:300; }
+        .faq-a-inner { padding:0 24px 22px; }
+
+        /* ══════════════════════════════════════════════════════
+           CONTACTO
+        ══════════════════════════════════════════════════════ */
+        #contacto {
+            background: linear-gradient(180deg, transparent 0%, rgba(15,5,32,.9) 8%, rgba(15,5,32,.9) 92%, transparent 100%);
+        }
+        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; margin-top:64px; align-items:start; }
+        .contact-left h3 { font-size:1.5rem; margin-bottom:8px; }
+        .contact-left .gold-line { margin:0 0 24px; }
+        .contact-left p { color: var(--text-muted); font-size:1.05rem; margin-bottom:32px; }
+        .contact-info-list { display:flex; flex-direction:column; gap:16px; margin-bottom:36px; }
+        .contact-info-item { display:flex; align-items:center; gap:14px; }
+        .contact-info-icon {
+            width:40px; height:40px; border-radius:50%;
+            background: var(--gold-dim); border:1px solid rgba(201,168,76,.2);
+            display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;
+        }
+        .contact-info-item span { font-size:1rem; color: var(--text-muted); }
+        .contact-info-item a:hover { color: var(--gold); }
+        .map-label { font-family: var(--font-ui); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color: var(--gold); margin-bottom:14px; }
+        .map-address { font-size:.95rem; color: var(--text-muted); margin-bottom:16px; }
+        .map-wrap { border-radius: var(--radius); overflow:hidden; border:1px solid rgba(201,168,76,.12); box-shadow: var(--shadow); }
+
+        /* ══════════════════════════════════════════════════════
+           FOOTER
+        ══════════════════════════════════════════════════════ */
+        footer { background:#030405; border-top:1px solid rgba(201,168,76,.1); padding-block:48px; }
+        .footer-inner { display:grid; grid-template-columns:2fr 1fr 1fr; gap:48px; margin-bottom:40px; }
+        .footer-brand .logo { font-size:1.1rem; margin-bottom:12px; }
+        .footer-brand p { font-size:.9rem; color: var(--text-muted); font-weight:300; max-width:280px; line-height:1.6; }
+        .footer-col h4 { font-family: var(--font-ui); font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color: var(--gold); margin-bottom:20px; }
+        .footer-col ul { display:flex; flex-direction:column; gap:10px; }
+        .footer-col a { font-size:.88rem; color: var(--text-muted); }
+        .footer-col a:hover { color: var(--gold); }
+        .social-row { display:flex; gap:12px; margin-top:20px; }
+        .social-link {
+            width:38px; height:38px; border-radius:50%;
+            border:1px solid rgba(201,168,76,.2); background: rgba(201,168,76,.05);
+            display:flex; align-items:center; justify-content:center;
+            font-size:.9rem; color: var(--text-muted); transition: var(--transition);
+        }
+        .social-link:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+        .footer-bottom {
+            border-top:1px solid rgba(255,255,255,.05); padding-top:28px;
+            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+        }
+        .footer-bottom p { font-family: var(--font-ui); font-size:.75rem; color: var(--text-muted); }
+        .footer-bottom strong { color: var(--gold); }
+        .legal-link { font-family: var(--font-ui); font-size:.75rem; color: var(--gold); text-decoration:underline; cursor:pointer; }
+        .legal-link:hover { color:#fff; }
+
+        /* ── BOTÓN FLOTANTE WHATSAPP ────────────────────────── */
+        .fab-wpp {
+            position:fixed; bottom:28px; right:28px; z-index:800;
+            width:58px; height:58px; border-radius:50%; background:var(--wpp);
+            display:flex; align-items:center; justify-content:center;
+            box-shadow:0 6px 24px rgba(37,211,102,.4);
+            transition: var(--transition);
+            animation:pulso-wpp 2.4s ease-in-out infinite;
+        }
+        .fab-wpp:hover { transform:scale(1.1); box-shadow:0 10px 32px rgba(37,211,102,.55); animation:none; }
+        .fab-wpp svg { width:30px; height:30px; fill:#fff; }
+        @keyframes pulso-wpp {
+            0%,100% { box-shadow:0 6px 24px rgba(37,211,102,.4); }
+            50% { box-shadow:0 6px 32px rgba(37,211,102,.7), 0 0 0 8px rgba(37,211,102,.08); }
+        }
+
+        /* ── VOLVER ARRIBA ─────────────────────────────────── */
+        .back-top {
+            position:fixed; bottom:28px; left:28px; z-index:800;
+            width:42px; height:42px; border-radius:50%;
+            background:rgba(201,168,76,.12); border:1px solid rgba(201,168,76,.25);
+            display:flex; align-items:center; justify-content:center;
+            color: var(--gold); font-size:1.1rem; cursor:pointer;
+            opacity:0; pointer-events:none; transition: var(--transition);
+        }
+        .back-top.show { opacity:1; pointer-events:auto; }
+        .back-top:hover { background:rgba(201,168,76,.2); transform:translateY(-3px); }
+
+        /* ── MODAL ─────────────────────────────────────────── */
+        .modal-overlay {
+            display:none; position:fixed; inset:0; z-index:1000;
+            background:rgba(0,0,0,.85); backdrop-filter:blur(6px); overflow-y:auto;
+        }
+        .modal-overlay.open { display:flex; align-items:flex-start; justify-content:center; padding:40px 16px; }
+        .modal-box {
+            background: var(--bg2); border:1px solid rgba(201,168,76,.25); border-radius:var(--radius);
+            width:min(100%,780px); padding:48px; position:relative;
+            box-shadow:0 24px 64px rgba(0,0,0,.8); animation:modal-in .3s ease;
+        }
+        @keyframes modal-in { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+        .modal-close { position:absolute; top:16px; right:20px; font-size:1.6rem; color: var(--gold); cursor:pointer; line-height:1; transition: var(--transition); }
+        .modal-close:hover { color:#fff; transform:rotate(90deg); }
+        .modal-box h2 { text-align:left; border-bottom:1px solid rgba(201,168,76,.2); padding-bottom:10px; margin:28px 0 12px; font-size:1.2rem; }
+        .modal-box h2:first-of-type { margin-top:0; font-size:1.8rem; text-align:center; border:none; }
+        .modal-box p, .modal-box li { font-size:.95rem; color: var(--text-muted); font-weight:300; margin-bottom:12px; line-height:1.75; }
+        .modal-box ul { margin-left:20px; list-style:disc; margin-bottom:16px; }
+        .modal-box strong { color: var(--text); }
+
+        /* ══════════════════════════════════════════════════════
+           MAESTRA EN VIVO
+        ══════════════════════════════════════════════════════ */
+        .maestra-vivo-grid {
+            display:grid; grid-template-columns:1fr 1.4fr;
+            gap:70px; align-items:center; margin-top:64px;
+        }
+        .maestra-foto-wrap { position:relative; }
+        .maestra-foto {
+            width:100%; border-radius:var(--radius);
+            box-shadow:0 24px 64px rgba(0,0,0,.7);
+            border:1px solid rgba(201,168,76,.15);
+        }
+        .maestra-badge-foto {
+            position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+            background:rgba(7,9,15,.88); backdrop-filter:blur(10px);
+            border:1px solid rgba(201,168,76,.3); border-radius:50px;
+            padding:8px 20px; white-space:nowrap;
+            font-family:var(--font-ui); font-size:.72rem; letter-spacing:.15em;
+            text-transform:uppercase; color:var(--gold);
+        }
+        .maestra-vivo-titulo { font-size:clamp(1.4rem,2.5vw,2rem); margin-bottom:6px; text-align:left; }
+        .maestra-vivo-sub { color:var(--text-muted); margin:16px 0 28px; font-size:1.05rem; }
+        .redes-grid { display:flex; flex-direction:column; gap:12px; margin-bottom:28px; }
+        .red-card {
+            display:flex; align-items:center; gap:16px;
+            background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07);
+            border-radius:10px; padding:14px 18px;
+            transition:var(--transition); cursor:pointer;
+        }
+        .red-card:hover { transform:translateX(6px); border-color:rgba(201,168,76,.25); background:rgba(201,168,76,.05); }
+        .red-icon { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+        .red-icon svg { width:18px; height:18px; }
+        .red-tiktok .red-icon   { background:rgba(0,0,0,.5); color:#fff; }
+        .red-instagram .red-icon{ background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
+        .red-facebook .red-icon { background:#1877f2; color:#fff; }
+        .red-whatsapp .red-icon { background:#25D366; color:#fff; }
+        .red-text { flex-grow:1; }
+        .red-text strong { display:block; font-family:var(--font-ui); font-size:.85rem; font-weight:600; color:var(--text); }
+        .red-text span { font-family:var(--font-ui); font-size:.75rem; color:var(--text-muted); }
+        .red-arrow { color:var(--gold); font-size:1rem; transition:var(--transition); }
+        .red-card:hover .red-arrow { transform:translateX(4px); }
+
+        /* ── RESPONSIVE ────────────────────────────────────── */
+        @media (max-width:900px) {
+            .maestra-vivo-grid { grid-template-columns:1fr; gap:48px; }
+            .maestra-vivo-titulo { text-align:center; }
+            .maestra-vivo-sub { text-align:center; }
+            #sobre-mi .about-wrap { grid-template-columns:1fr; gap:48px; }
+            .about-text h2 { text-align:center; }
+            .about-text .gold-line { margin-inline:auto; }
+            .contact-grid { grid-template-columns:1fr; gap:40px; }
+            .footer-inner { grid-template-columns:1fr 1fr; }
+            .footer-brand { grid-column:span 2; }
+        }
+        @media (max-width:768px) {
+            nav { display:none; }
+            .hamburger { display:flex; }
+            #inicio h1 { font-size:2rem; }
+            .trust-row { gap:24px; }
+            .modal-box { padding:28px; }
+            .footer-inner { grid-template-columns:1fr; }
+            .footer-brand { grid-column:auto; }
+            .footer-bottom { flex-direction:column; text-align:center; }
+        }
+        @media (max-width:480px) {
+            section { padding-block:70px; }
+            .hero-btns { flex-direction:column; align-items:center; }
+            .trust-item strong { font-size:1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<header id="site-header">
+    <div class="container header-inner">
+        <a href="#inicio" class="logo">
+            Astral Love Center
+            <span>Vidente & Espiritista — Maestra Victoria</span>
+        </a>
+        <nav id="main-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#maestra-vivo">La Maestra</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#faq">Preguntas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="header-cta">
+            <a href="https://wa.me/12408086007" class="btn btn-wpp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.877L.057 23.943l6.253-1.641A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 01-5.044-1.381l-.361-.214-3.741.981.998-3.648-.235-.374A9.87 9.87 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106S21.894 6.58 21.894 12 17.42 21.894 12 21.894z"/></svg>
+                WhatsApp
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Menú móvil -->
+<div class="mobile-nav" id="mobile-nav">
+    <a href="#inicio"      onclick="cerrarMenu()">Inicio</a>
+    <a href="#servicios"   onclick="cerrarMenu()">Servicios</a>
+    <a href="#sobre-mi"      onclick="cerrarMenu()">Sobre Mí</a>
+    <a href="#maestra-vivo"  onclick="cerrarMenu()">La Maestra</a>
+    <a href="#testimonios"   onclick="cerrarMenu()">Testimonios</a>
+    <a href="#faq"         onclick="cerrarMenu()">Preguntas Frecuentes</a>
+    <a href="#contacto"    onclick="cerrarMenu()">Contacto</a>
+</div>
+
+<!-- ── HERO ───────────────────────────────────────────── -->
+<section id="inicio">
+    <div class="container">
+        <div class="hero-content reveal">
+            <div class="hero-badge">Vidente & Espiritista con más de 40 años de experiencia</div>
+            <h1>Lo que buscas<br>ya tiene <em>Respuesta</em></h1>
+            <p class="hero-sub">La Maestra Victoria <strong style="color:var(--gold-light);">ve lo que otros no pueden ver.</strong> Consultas de videncia, amarres de amor y rituales poderosos que transforman tu realidad — 100% confidencial, desde <strong style="color:var(--gold-light);">$50 USD.</strong></p>
+            <div class="hero-btns">
+                <a href="https://wa.me/12408086007" class="btn btn-gold" target="_blank" rel="noopener">Reservar Mi Consulta — $50 USD</a>
+                <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+            </div>
+            <div class="trust-row">
+                <div class="trust-item">
+                    <strong>40+</strong>
+                    <span>Años como Vidente</span>
+                </div>
+                <div class="trust-item">
+                    <strong>5,000+</strong>
+                    <span>Casos Resueltos</span>
+                </div>
+                <div class="trust-item">
+                    <strong>$50</strong>
+                    <span>Consulta desde USD</span>
+                </div>
+                <div class="trust-item">
+                    <strong>5 ★</strong>
+                    <span>Clientes Satisfechos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── SERVICIOS ───────────────────────────────────────── -->
+<section id="servicios">
+    <div class="container">
+        <p class="section-label reveal">Soluciones Reales para Problemas Reales</p>
+        <h2 class="section-title reveal">¿Qué Puedo Hacer por Ti?</h2>
+        <span class="gold-line reveal"></span>
+        <div class="services-grid">
+
+            <div class="service-card reveal">
+                <div class="service-img">
+                    <img src="img-amarres.jpg" alt="Ritual de Amarre de Amor" loading="lazy">
+                </div>
+                <div class="service-body">
+                    <h3>Amarres de Amor Garantizados</h3>
+                    <p>¿Esa persona se alejó o perdió el interés? Con rituales de magia blanca de alta potencia, devuelvo el amor que sientes te pertenece — resultados reales en tiempo real.</p>
+                    <a href="https://wa.me/12408086007" class="service-link" target="_blank" rel="noopener">Consultar Ahora</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-img">
+                    <img src="img-tarot.jpg" alt="Lectura de Tarot en Línea" loading="lazy">
+                </div>
+                <div class="service-body">
+                    <h3>Lectura de Tarot Precisa</h3>
+                    <p>¿Necesitas respuestas urgentes? El tarot de la Maestra Victoria revela la verdad sobre tu amor, trabajo y futuro con una precisión que te dejará sin palabras.</p>
+                    <a href="https://wa.me/12408086007" class="service-link" target="_blank" rel="noopener">Consultar Ahora</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-img">
+                    <img src="img-zodiaco.jpg" alt="Videncia y Carta Astral" loading="lazy">
+                </div>
+                <div class="service-body">
+                    <h3>Videncia & Carta Astral</h3>
+                    <p>Como vidente, la Maestra Victoria no solo lee tu carta natal — también percibe lo que viene. Conoce tu destino, tu misión de vida y lo que el universo tiene preparado para ti.</p>
+                    <a href="https://wa.me/12408086007" class="service-link" target="_blank" rel="noopener">Consultar Ahora</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-img">
+                    <img src="img-endulza.jpg" alt="Ritual de Endulzamiento" loading="lazy">
+                </div>
+                <div class="service-body">
+                    <h3>Rituales de Endulzamiento</h3>
+                    <p>¿Tu pareja está fría, distante o constantemente irritable? Este ritual transforma su actitud desde la raíz, devolviendo la ternura, el respeto y la pasión a tu relación.</p>
+                    <a href="https://wa.me/12408086007" class="service-link" target="_blank" rel="noopener">Consultar Ahora</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-img">
+                    <img src="img-limpieza.jpg" alt="Limpieza Espiritual Profunda" loading="lazy">
+                </div>
+                <div class="service-body">
+                    <h3>Limpieza Espiritual Profunda</h3>
+                    <p>¿Sientes que todo te sale mal, que hay un peso invisible o que alguien te hizo daño? Elimino envidiias, trabajos negativos y bloqueos energéticos para liberar tus caminos al éxito y al amor.</p>
+                    <a href="https://wa.me/12408086007" class="service-link" target="_blank" rel="noopener">Consultar Ahora</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-img">
+                    <img src="img-proteccion.jpg" alt="Protección Espiritual" loading="lazy">
+                </div>
+                <div class="service-body">
+                    <h3>Protección Espiritual Poderosa</h3>
+                    <p>¿Sientes presencias extrañas, mala suerte constante o ataques de envidia? Creo escudos espirituales que protegen tu cuerpo, tu hogar y tu familia de cualquier energía oscura o mala intención.</p>
+                    <a href="https://wa.me/12408086007" class="service-link" target="_blank" rel="noopener">Consultar Ahora</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-img">
+                    <img src="img-recuperacion.jpg" alt="Regreso de Pareja" loading="lazy">
+                </div>
+                <div class="service-body">
+                    <h3>Regreso de Pareja Efectivo</h3>
+                    <p>¿Terminó tu relación y no puedes superarlo? Con rituales de regreso probados en miles de casos, trabajo espiritualmente para que esa persona vuelva a ti con amor genuino y voluntad propia.</p>
+                    <a href="https://wa.me/12408086007" class="service-link" target="_blank" rel="noopener">Consultar Ahora</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── SOBRE MÍ ────────────────────────────────────────── -->
+<section id="sobre-mi">
+    <div class="container">
+        <div class="about-wrap">
+            <div class="about-img-wrap reveal">
+                <img src="sobre-mi.png" alt="Maestra Victoria – Vidente y Espiritista" class="about-img">
+            </div>
+            <div class="about-text reveal">
+                <p class="section-label" style="text-align:left;">Conoce a Tu Vidente</p>
+                <h2>Maestra Victoria</h2>
+                <span class="gold-line"></span>
+                <p>La Maestra Victoria es una <strong style="color:var(--gold-light);">Vidente y Espiritista</strong> con más de 40 años de don activo. Nació con el regalo de percibir lo que otros no pueden ver: el pasado, el presente y lo que está por venir en tu vida.</p>
+                <p>Miles de personas en los Estados Unidos, Colombia y toda Latinoamérica han encontrado respuestas, amor y paz gracias a su trabajo. Sus rituales no son simples ceremonias — son intervenciones energéticas precisas que <strong style="color:var(--gold-light);">producen resultados reales.</strong></p>
+                <div class="credential-list">
+                    <div class="credential">
+                        <div class="credential-icon">✦</div>
+                        <p>Don de videncia heredado — más de 40 años de práctica activa</p>
+                    </div>
+                    <div class="credential">
+                        <div class="credential-icon">✦</div>
+                        <p>Especialista en amarres, regresos de pareja y limpiezas profundas</p>
+                    </div>
+                    <div class="credential">
+                        <div class="credential-icon">✦</div>
+                        <p>Atiende en línea a nivel mundial — discreción y confidencialidad total</p>
+                    </div>
+                    <div class="credential">
+                        <div class="credential-icon">✦</div>
+                        <p>Consulta desde <strong style="color:var(--gold);">$50 USD</strong> — cupos limitados por semana</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/12408086007" class="btn btn-gold" target="_blank" rel="noopener">Reservar Mi Consulta — $50 USD</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── MAESTRA EN VIVO ─────────────────────────────────── -->
+<section id="maestra-vivo" style="background:linear-gradient(180deg,transparent 0%,rgba(10,4,22,.97) 8%,rgba(10,4,22,.97) 92%,transparent 100%);">
+    <div class="container">
+        <p class="section-label reveal">Conócela en Persona</p>
+        <h2 class="section-title reveal">La Maestra Victoria en Vivo</h2>
+        <span class="gold-line reveal"></span>
+        <div class="maestra-vivo-grid reveal">
+            <!-- FOTO -->
+            <div class="maestra-foto-wrap">
+                <img src="sobre-mi.png" alt="Maestra Victoria – Vidente y Espiritista" class="maestra-foto">
+                <div class="maestra-badge-foto">
+                    <span>✦</span> Vidente & Espiritista
+                </div>
+            </div>
+            <!-- VIDEOS / REDES -->
+            <div class="maestra-info-wrap">
+                <h3 class="maestra-vivo-titulo">Sígueme en mis Redes</h3>
+                <p class="maestra-vivo-sub">Comparto rituales, consejos espirituales y lecturas en vivo cada semana. Únete a la comunidad y siente la energía de primera mano.</p>
+                <div class="redes-grid">
+                    <a href="https://www.tiktok.com/@astrallovecenter" target="_blank" rel="noopener" class="red-card red-tiktok">
+                        <div class="red-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+                        </div>
+                        <div class="red-text">
+                            <strong>TikTok</strong>
+                            <span>@astrallovecenter</span>
+                        </div>
+                        <div class="red-arrow">→</div>
+                    </a>
+                    <a href="https://www.instagram.com/astrallovecenter/" target="_blank" rel="noopener" class="red-card red-instagram">
+                        <div class="red-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </div>
+                        <div class="red-text">
+                            <strong>Instagram</strong>
+                            <span>@astrallovecenter</span>
+                        </div>
+                        <div class="red-arrow">→</div>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61586456000985" target="_blank" rel="noopener" class="red-card red-facebook">
+                        <div class="red-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </div>
+                        <div class="red-text">
+                            <strong>Facebook</strong>
+                            <span>Astral Love Center</span>
+                        </div>
+                        <div class="red-arrow">→</div>
+                    </a>
+                    <a href="https://wa.me/12408086007" target="_blank" rel="noopener" class="red-card red-whatsapp">
+                        <div class="red-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.877L.057 23.943l6.253-1.641A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 01-5.044-1.381l-.361-.214-3.741.981.998-3.648-.235-.374A9.87 9.87 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106S21.894 6.58 21.894 12 17.42 21.894 12 21.894z"/></svg>
+                        </div>
+                        <div class="red-text">
+                            <strong>WhatsApp</strong>
+                            <span>+1 (240) 808-6007</span>
+                        </div>
+                        <div class="red-arrow">→</div>
+                    </a>
+                </div>
+                <a href="https://wa.me/12408086007" class="btn btn-gold" target="_blank" rel="noopener" style="margin-top:8px;">Reservar Mi Consulta — $50 USD</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── TESTIMONIOS ────────────────────────────────────── -->
+<section id="testimonios">
+    <div class="container">
+        <p class="section-label reveal">Historias Reales</p>
+        <h2 class="section-title reveal">Lo Que Dicen Nuestros Clientes</h2>
+        <span class="gold-line reveal"></span>
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card reveal">
+                <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <blockquote>Estaba pasando por el peor momento de mi vida. Gracias a su guía y los rituales, hoy mi pareja y yo estamos más unidos que nunca. No sé qué hubiera hecho sin la Maestra Victoria.</blockquote>
+                <div class="testimonial-author">
+                    <div class="avatar">LM</div>
+                    <div>
+                        <div class="name">Laura M.</div>
+                        <div class="location">Miami, FL</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <blockquote>La lectura de tarot fue increíblemente precisa. Me dio la tranquilidad que necesitaba para tomar una decisión importante en mi carrera. Verdaderamente dotada.</blockquote>
+                <div class="testimonial-author">
+                    <div class="avatar">CR</div>
+                    <div>
+                        <div class="name">Carlos R.</div>
+                        <div class="location">Silver Spring, MD</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <blockquote>Excelente servicio y profesionalismo. Me sentí escuchada y apoyada en todo momento. La limpieza espiritual cambió completamente la energía de mi hogar. ¡100% recomendada!</blockquote>
+                <div class="testimonial-author">
+                    <div class="avatar">AG</div>
+                    <div>
+                        <div class="name">Ana G.</div>
+                        <div class="location">Nueva York, NY</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <blockquote>Al principio era escéptica, pero después de mi lectura de carta natal quedé completamente asombrada. Describió mi situación de vida a la perfección sin saber nada de mí.</blockquote>
+                <div class="testimonial-author">
+                    <div class="avatar">MP</div>
+                    <div>
+                        <div class="name">María P.</div>
+                        <div class="location">Los Ángeles, CA</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <blockquote>El ritual de endulzamiento funcionó de maravilla. Mi relación pasó de peleas constantes a una armonía total. Ojalá hubiera encontrado a la Maestra Victoria antes.</blockquote>
+                <div class="testimonial-author">
+                    <div class="avatar">JL</div>
+                    <div>
+                        <div class="name">Jessica L.</div>
+                        <div class="location">Houston, TX</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <blockquote>Muy respetuosa y compasiva. Nunca juzga, solo guía. Llevo dos años consultándola y cada sesión me trae claridad y paz. La recomiendo con los ojos cerrados.</blockquote>
+                <div class="testimonial-author">
+                    <div class="avatar">RV</div>
+                    <div>
+                        <div class="name">Roberto V.</div>
+                        <div class="location">Chicago, IL</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────── -->
+<section id="faq">
+    <div class="container">
+        <p class="section-label reveal">Resolvemos Tus Dudas</p>
+        <h2 class="section-title reveal">Preguntas Frecuentes</h2>
+        <span class="gold-line reveal"></span>
+        <div class="faq-list">
+
+            <div class="faq-item reveal">
+                <div class="faq-q">¿Realmente funciona la videncia y los rituales? <div class="faq-icon">+</div></div>
+                <div class="faq-a"><div class="faq-a-inner">Sí. La Maestra Victoria lleva más de 40 años ejerciendo su don con resultados comprobados. Miles de clientes en todo el mundo dan fe de ello. Los rituales no son magia de película — son trabajos energéticos precisos que actúan sobre la realidad cuando se realizan con el conocimiento correcto y la intención adecuada.</div></div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-q">¿Cuánto cuesta una consulta? <div class="faq-icon">+</div></div>
+                <div class="faq-a"><div class="faq-a-inner">La consulta inicial de videncia tiene un valor de <strong>$50 USD</strong>. En ella, la Maestra Victoria evalúa tu situación y te indica cuál es el trabajo espiritual que necesitas. Los rituales y trabajos energéticos se cotizan de forma personalizada según el caso. Escríbenos por WhatsApp para recibir tu cotización sin compromiso.</div></div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-q">¿Mi consulta es 100% confidencial? <div class="faq-icon">+</div></div>
+                <div class="faq-a"><div class="faq-a-inner">Totalmente. El secreto profesional es sagrado en Astral Love Center. Tu nombre, tu historia y todo lo que compartas jamás saldrá de esta consulta. Nunca compartimos información con terceros bajo ninguna circunstancia.</div></div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-q">¿En cuánto tiempo se ven resultados? <div class="faq-icon">+</div></div>
+                <div class="faq-a"><div class="faq-a-inner">Depende del tipo de trabajo. Lecturas de tarot y videncia: resultados inmediatos en la misma sesión. Rituales de endulzamiento o protección: cambios perceptibles en 3 a 7 días. Amarres y regresos de pareja: el proceso completo puede tomar entre 21 y 40 días dependiendo de la distancia energética del caso. La Maestra Victoria te acompaña en cada etapa.</div></div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-q">¿Atiende en línea desde cualquier país? <div class="faq-icon">+</div></div>
+                <div class="faq-a"><div class="faq-a-inner">¡Sí! Atiende clientes de Estados Unidos, Colombia, México, España y toda Latinoamérica completamente en línea por WhatsApp o videollamada. La distancia no interrumpe el trabajo espiritual — la energía no tiene fronteras.</div></div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-q">¿Cómo reservo mi consulta? <div class="faq-icon">+</div></div>
+                <div class="faq-a"><div class="faq-a-inner">Es muy sencillo: escribe al WhatsApp <strong>+1 (240) 808-6007</strong>, cuéntale brevemente tu situación y la Maestra Victoria te responderá personalmente. Los cupos son limitados — se agenda por orden de llegada. No esperes más para encontrar las respuestas que necesitas.</div></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACTO ────────────────────────────────────────── -->
+<section id="contacto">
+    <div class="container">
+        <p class="section-label reveal">Da el Primer Paso Hoy</p>
+        <h2 class="section-title reveal">Tu Situación Tiene Solución</h2>
+        <span class="gold-line reveal"></span>
+        <div class="contact-grid">
+            <div class="contact-left reveal">
+                <h3>Reserva Tu Consulta — Solo $50 USD</h3>
+                <span class="gold-line" style="margin:0 0 24px;"></span>
+                <p>No sigas sufriendo en silencio. La Maestra Victoria tiene el don y la experiencia para darte las respuestas que necesitas y el trabajo espiritual que tu situación requiere. <strong style="color:var(--gold-light);">Los cupos son limitados — escribe ahora.</strong></p>
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">📲</div>
+                        <span><a href="https://wa.me/12408086007" target="_blank" rel="noopener">+1 (240) 808-6007</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold)"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </div>
+                        <span><a href="https://www.instagram.com/astrallovecenter/" target="_blank" rel="noopener">@astrallovecenter</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold)"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+                        </div>
+                        <span><a href="https://www.tiktok.com/@astrallovecenter" target="_blank" rel="noopener">@astrallovecenter en TikTok</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">✉️</div>
+                        <span><a href="mailto:contact@astrallovecenter.com">contact@astrallovecenter.com</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">🌐</div>
+                        <span><a href="https://astrallovecenter.com">astrallovecenter.com</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">📍</div>
+                        <span>8415 Georgia Ave, Silver Spring, MD 20910</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/12408086007" class="btn btn-wpp" target="_blank" rel="noopener" style="width:100%;max-width:320px;">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.877L.057 23.943l6.253-1.641A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 01-5.044-1.381l-.361-.214-3.741.981.998-3.648-.235-.374A9.87 9.87 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106S21.894 6.58 21.894 12 17.42 21.894 12 21.894z"/></svg>
+                    Chatear por WhatsApp Ahora
+                </a>
+            </div>
+            <div class="contact-right reveal">
+                <p class="map-label">Nuestra Ubicación</p>
+                <p class="map-address">8415 Georgia Avenue, Silver Spring, MD, Estados Unidos, 20910</p>
+                <div class="map-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.5!2d-77.0264!3d38.9959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cf4b4c4c4c4b%3A0x0!2s8415%20Georgia%20Ave%2C%20Silver%20Spring%2C%20MD%2020910!5e0!3m2!1ses!2sus!4v1678900000000!5m2!1ses!2sus"
+                        width="100%" height="340" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Ubicación Astral Love Center">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">Astral Love Center <span>por Maestra Victoria</span></div>
+                <p>Vidente y Espiritista con más de 40 años de don activo. Amarres, regresos de pareja, lecturas de tarot y limpiezas espirituales que producen resultados reales. Consulta desde $50 USD.</p>
+                <div class="social-row">
+                    <a href="https://www.instagram.com/astrallovecenter/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61586456000985" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@astrallovecenter" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+                    </a>
+                    <a href="https://wa.me/12408086007" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.877L.057 23.943l6.253-1.641A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 01-5.044-1.381l-.361-.214-3.741.981.998-3.648-.235-.374A9.87 9.87 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106S21.894 6.58 21.894 12 17.42 21.894 12 21.894z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Amarres de Amor</a></li>
+                    <li><a href="#servicios">Lectura de Tarot</a></li>
+                    <li><a href="#servicios">Carta Natal</a></li>
+                    <li><a href="#servicios">Rituales de Endulzamiento</a></li>
+                    <li><a href="#servicios">Limpieza Espiritual</a></li>
+                    <li><a href="#servicios">Protección Energética</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#sobre-mi">Sobre Maestra Victoria</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="mailto:contact@astrallovecenter.com">Escríbenos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="yr"></span> <strong>Astral Love Center</strong>. Todos los derechos reservados.</p>
+            <p>Aviso Legal: Los servicios son para orientación personal. Debes ser mayor de 18 años.</p>
+            <span class="legal-link" id="open-modal">Términos y Políticas Legales</span>
+        </div>
+    </div>
+</footer>
+
+<!-- ── BOTÓN FLOTANTE WHATSAPP ─────────────────────────── -->
+<a href="https://wa.me/12408086007" class="fab-wpp" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.877L.057 23.943l6.253-1.641A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 01-5.044-1.381l-.361-.214-3.741.981.998-3.648-.235-.374A9.87 9.87 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106S21.894 6.58 21.894 12 17.42 21.894 12 21.894z"/></svg>
+</a>
+
+<!-- ── VOLVER ARRIBA ───────────────────────────────────── -->
+<button class="back-top" id="back-top" aria-label="Volver arriba">↑</button>
+
+<!-- ── MODAL ──────────────────────────────────────────── -->
+<div class="modal-overlay" id="modal">
+    <div class="modal-box">
+        <span class="modal-close" id="close-modal">&times;</span>
+        <h2>Términos de Uso y Políticas Legales</h2>
+
+        <h2>1. Aviso Legal</h2>
+        <p>Los servicios ofrecidos en Astral Love Center (lecturas de tarot, astrología, rituales y amarres de amor) son exclusivamente para fines espirituales, de entretenimiento y crecimiento personal. <strong>No garantizamos resultados 100% específicos</strong>, ya que la efectividad de la energía y la magia depende de múltiples factores, incluido el libre albedrío de las personas involucradas.</p>
+        <p>Nuestros servicios <strong>NO reemplazan</strong> el consejo de un profesional médico, psicológico, financiero o legal. Si enfrentas problemas de salud física o mental, te instamos a buscar ayuda profesional certificada.</p>
+
+        <h2>2. Términos y Condiciones de Uso</h2>
+        <ul>
+            <li>Al acceder a este sitio y usar nuestros servicios, confirmas que tienes <strong>18 años de edad o más</strong>.</li>
+            <li>Te comprometes a mantener una comunicación respetuosa en todo momento.</li>
+            <li>Toda la información proporcionada durante las consultas se trata bajo el más estricto secreto profesional.</li>
+        </ul>
+
+        <h2>3. Política de Privacidad</h2>
+        <p>Respetamos tu privacidad. Los datos solicitados (nombre, fecha de nacimiento, número de WhatsApp, fotografías) se usan exclusivamente para realizar el servicio solicitado. <strong>Nunca compartiremos, venderemos ni expondremos</strong> tu información personal o tu historia a terceros. Tus consultas son 100% confidenciales.</p>
+
+        <h2>4. Política de Reembolsos y Cancelaciones</h2>
+        <ul>
+            <li><strong>Cancelaciones:</strong> Las consultas en vivo deben cancelarse o reprogramarse con al menos 24 horas de anticipación.</li>
+            <li><strong>Reembolsos:</strong> Debido a la naturaleza de los servicios espirituales y digitales, <strong>no se ofrecen reembolsos</strong> una vez que el servicio, lectura o ritual haya comenzado o sido entregado.</li>
+        </ul>
+
+        <h2>5. Política de Cookies</h2>
+        <p>Utilizamos cookies y tecnologías de seguimiento (como Google Analytics) para analizar el tráfico del sitio y mejorar tu experiencia de navegación. Al continuar navegando en este sitio, aceptas el uso de estas cookies.</p>
+    </div>
+</div>
+
+<script>
+    /* Año dinámico */
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* Header al hacer scroll */
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+        document.getElementById('back-top').classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+
+    /* Volver arriba */
+    document.getElementById('back-top').addEventListener('click', () =>
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    );
+
+    /* Hamburguesa */
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    function cerrarMenu() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+    }
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileNav.classList.toggle('open');
+    });
+
+    /* Link activo en nav */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#main-nav a');
+    const obsNav = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting)
+                navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+        });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => obsNav.observe(s));
+
+    /* Scroll reveal */
+    const revealObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(r => revealObs.observe(r));
+
+    /* FAQ acordeón */
+    document.querySelectorAll('.faq-q').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            const ans  = q.nextElementSibling;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-a').style.maxHeight = null;
+            });
+            if (!isOpen) { item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+        });
+    });
+
+    /* Modal */
+    const modal     = document.getElementById('modal');
+    const openModal = document.getElementById('open-modal');
+    const closeModal= document.getElementById('close-modal');
+    openModal.addEventListener('click',  () => modal.classList.add('open'));
+    closeModal.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+</script>
+</body>
+</html>
